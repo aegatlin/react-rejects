@@ -1,9 +1,14 @@
 {
+  "name": "react-rejects",
+  "version": "0.0.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.tsx --format cjs --dts",
     "dev": "npm run build -- --watch"
+  },
+  "dependencies": {
+    "lucide-react": "^0.145.0"
   },
   "devDependencies": {
     "tsup": "^6.7.0"

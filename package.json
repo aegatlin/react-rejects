@@ -18,7 +18,6 @@
   "name": "react-rejects",
   "packageManager": "npm@7.30.1",
   "workspaces": [
-    "apps/*",
     "packages/*"
   ]
 }
