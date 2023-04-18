@@ -1,7 +1,10 @@
-export function Card({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="m-4 p-8 overflow-hidden rounded-2xl border shadow-sm hover:border-gray-300">
-      {children}
-    </div>
-  );
+import { ReactNode } from "react";
+
+interface CardProps {
+  children?: ReactNode;
+  classes?: string;
+}
+
+export function Card({ children = "card content", classes = " " }: CardProps) {
+  return <div className={classes}>{children}</div>;
 }
