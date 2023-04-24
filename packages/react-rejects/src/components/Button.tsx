@@ -6,6 +6,7 @@ interface ButtonProps {
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   classes?: string;
 }
+type Button2Props = Omit<ButtonProps, "classes">;
 
 export function Button({
   children = "button",
@@ -18,4 +19,14 @@ export function Button({
       {children}
     </button>
   );
+}
+
+export function ButtonBuilder({ classes }: { classes: string }) {
+  return function Button({ disabled, onClick, children }: Button2Props) {
+    return (
+      <button className={classes} disabled={disabled} onClick={onClick}>
+        {children}
+      </button>
+    );
+  };
 }

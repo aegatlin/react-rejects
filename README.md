@@ -52,3 +52,9 @@ Learn more about the power of Turborepo:
 ## CSS Truths to reminds myself of.
 
 - Semantics _contains_ style. The difference between two _conceptually_ different components is often _just_ CSS. A sidebar and a header are just two divs with children. A modal and a drawer are just two divs with children. They are structurally and functionally identical, all that differs is style, which creates drastically different UX.
+
+## Aspirations
+
+The problem with letting people supply their own theme files is there's no way to build the component classes from it without the users writing it to a file and creating a pseudo-compile-time step. Really there's just a theme-builder experience that should occur independently of normal reject components. Once you have built your theme you can copy and paste it into your `src/` file so that both tailwind can find it and gen the appropriate class styles, and also so that you can `buildComponents` with it.
+
+Of course, the elephant in the room and a file full of css strings is a `.css` file by another name. Of course, you don't have to use the theme builder. I can have a few default themes you can write out to your src

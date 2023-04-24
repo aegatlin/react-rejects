@@ -11,4 +11,16 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    "rounded",
+    "rounded-2xl",
+    {
+      pattern: /border-.*-.*/,
+      variants: ["hover"],
+    },
+    {
+      pattern: /bg-.*-.*/,
+      variants: ["hover", "enabled"],
+    },
+  ],
 };
